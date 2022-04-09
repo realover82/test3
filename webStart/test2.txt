@@ -1,0 +1,39 @@
+test
+-----------
+test_gen = Generator.flow_from_directory ('catdog', target_size=(64, 64),
+                                         batch_size=32, classes=['test1'])
+----------------
+pred = model.predict(test_gen)
+pred.shape
+
+---------------
+
+x_test, y_test = next(test_gen)
+test_gen
+
+for i in range(len(x_test)):
+   plt.imshow(x_test[i])
+   plt.show()
+
+---------------------
+import numpy as np
+
+x_tests, y_tests = [], []
+for i in range(len(test_gen)):
+  x_test, y_test = next(test_gen)
+  x_tests.append(x_test)
+  y_tests.append(y_test)
+
+x_test = np.concatenate(x_tests, axis=0)
+y_test = np.concatenate(y_tests, axis=0)
+
+print(x_test.shape)
+print(y_test.shape)
+-------------
+
+pred = model.predict(x_test[:10])
+
+for i in range(10):
+   plt.imshow(x_test[i])
+   plt.title(pred[i])
+   plt.show()
