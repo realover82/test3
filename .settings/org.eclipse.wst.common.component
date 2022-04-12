@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="실습과제2">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test3/webStart/webStart/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/webStart/webStart/src/main/java"/>
+        <property name="context-root" value="실습과제2"/>
+        <property name="java-output-path" value="/실습과제2/bin"/>
+    </wb-module>
+</project-modules>
